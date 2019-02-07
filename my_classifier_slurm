@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# X number of nodes with Y number of
+# cores in each node.
+#SBATCH -N 1
+#SBATCH -c 1
+#SBATCH --gres=gpu:1
+#SBATCH --mem=12g
+
+# Partition: cpu | ug-gpu-small
+#SBATCH -p ug-gpu-small
+
+# QOS: debug | short | long-high-prio | long-low-prio | long-cpu
+#SBATCH --qos=short
+
+# TIME(168=7 days)
+#SBATCH -t 1:00:00
+
+# Source the bash profile (required to use the module command)
+source /etc/profile
+
+# Run your program (replace this with your program)
+python3 coursework_classifier.py
