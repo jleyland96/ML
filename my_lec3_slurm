@@ -20,4 +20,4 @@
 source /etc/profile
 
 # Run your program (replace this with your program)
-python Lec3.py
+python3 Lec3.py
